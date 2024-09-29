@@ -3,6 +3,7 @@
 
 ## Acknowledgement
 **Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.** 
+
 **Most of this PyTorch reimplementation was written by Kim Sung-Bin, a PhD student at the AMI Lab.**
 
 Most of the source code was referenced in the orignal tensorflow implementation.
