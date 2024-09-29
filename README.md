@@ -44,24 +44,24 @@ There are various modes for inference in the motion magnification method. Each m
     │   │   ├── fir
 
 In "Without a temporal filter", the static mode amplifies small motion based on the first frame, while the dynamic mode amplifies small motion by comparing the current frame to the previous frame.
+
 With a temporal filter, amplification is applied by utilizing the temporal filter. This method effectively amplifies small motions of specific frequencies while reducing noise that may arise in the motion magnification results.
+
 **We highly recommend using a temporal filter for real videos, as they are likely to contain photometric noise.** 
 
-
-
-
-## For quick start
-1. get the baby video and split into multi frames
-
-        wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
-        ffmpeg -i <path_to_input>/baby.mp4 -f image2 <path_to_output>/baby/%06d.png
-
-2. And then run the "Inference with temporal filter
-
-The default mode is "DifferenceOfIIR".
-      
-       python main.py --phase="play_temporal" --checkpoint_path="Path of the model" --vid_dir="Path to the directory where the video frames are located" --out_dir="path to the output" --amplification_factor=20
-     
+    
+    ## For quick start
+    1. get the baby video and split into multi frames
+    
+            wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
+            ffmpeg -i <path_to_input>/baby.mp4 -f image2 <path_to_output>/baby/%06d.png
+    
+    2. And then run the "Inference with temporal filter
+    
+    The default mode is "DifferenceOfIIR".
+          
+           python main.py --phase="play_temporal" --checkpoint_path="Path of the model" --vid_dir="Path to the directory where the video frames are located" --out_dir="path to the output" --amplification_factor=20
+         
 
 ## Inference
 This command is executed in dynamic mode. Delete "--velocity_mag" for static mode.
