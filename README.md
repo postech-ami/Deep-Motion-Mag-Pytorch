@@ -2,7 +2,7 @@
 ### [Paper](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf)
 
 ## Acknowledgement
-Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.
+Thank you to [Tae-Hyun Oh](https://ami.postech.ac.kr/members/tae-hyun-oh), a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.
 
 Most of this PyTorch reimplementation was written by [Kim Sung-Bin](https://sites.google.com/view/kimsungbin/), a PhD student at the AMI Lab.
 
