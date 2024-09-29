@@ -62,7 +62,7 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 
         python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="Path of the video frames" --is_single_gpu_trained
 
-**The amplification level can be adjusted by changing the <amplification \factor>.** 
+**The amplification level can be adjusted by changing the <amplification_factor>.** 
 
 ### For the inference with a temporal filter
 
