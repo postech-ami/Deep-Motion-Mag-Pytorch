@@ -26,10 +26,10 @@ pip install pillow tqdm matplotlib scipy tensorboard opencv-python==4.6.0.66
 ```
 
 ## Training
-1. Download the dataset at https://github.com/12dmodel/deep_motion_mag.
-2. Modify the data_path in the train.sh file and run it, or enter the following command.
+1. Download the dataset at https://github.com/12dmodel/deep_motion_mag and unzip.
+2. Enter the following command.
     ```
-    python main.py --phase="train" --checkpoint_path="Path to the model.tar" --data_path="Path to the directory where the lmdb file are located"
+    python main.py --phase="train" --checkpoint_path="Path to the model.tar" --data_path="Path to the directory where the training data is located"
     ```
 
 ## Inference
