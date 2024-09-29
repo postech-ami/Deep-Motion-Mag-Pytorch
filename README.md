@@ -1,5 +1,5 @@
 # Author-verified Pytorch Reimplementation of Learning-based Video Motion Magnification (ECCV 2018)
-### [Paper](https://arxiv.org/abs/2312.11360](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf)
+### [Paper]([https://arxiv.org/abs/2312.11360](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf))
 
 ## Acknowledgement
 **Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.** 
