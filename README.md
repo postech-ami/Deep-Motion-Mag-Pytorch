@@ -31,9 +31,9 @@ pip install pillow tqdm matplotlib scipy tensorboard opencv-python==4.6.0.66
     python main.py --phase="train" --checkpoint_path="Path to the model.tar" --data_path="Path to the directory where the lmdb file are located"
     ```
 
-## Training
+## Inference
+There are various modes for inference in the motion magnification method. Each mode can branch as follows:
 
-    ├── main.py
     ├── Inference
     │   ├── Without a temporal Filter
     │   │   ├── Static
@@ -42,6 +42,12 @@ pip install pillow tqdm matplotlib scipy tensorboard opencv-python==4.6.0.66
     │   │   ├── differenceOfIIR
     │   │   ├── butter
     │   │   ├── fir
+
+In "Without a temporal filter", the static mode amplifies small motion based on the first frame, while the dynamic mode amplifies small motion by comparing the current frame to the previous frame.
+With a temporal filter, amplification is applied by utilizing the temporal filter. This method effectively amplifies small motions of specific frequencies while reducing noise that may arise in the motion magnification results.
+**We highly recommend using a temporal filter for real videos, as they are likely to contain photometric noise.** 
+
+
 
 
 ## For quick start
