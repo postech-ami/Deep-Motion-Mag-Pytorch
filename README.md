@@ -1,7 +1,7 @@
 # Author-verified Pytorch Reimplementation of Learning-based Video Motion Magnification (ECCV 2018)
 ### [Paper]([https://arxiv.org/abs/2312.11360](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf))
 
-## Highlights
+## Acknowledgement
 **Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.** 
 **Most of this PyTorch reimplementation was written by Kim Sung-Bin, a PhD student at the AMI Lab.**
 
@@ -50,81 +50,26 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 **We highly recommend using a temporal filter for real videos, as they are likely to contain photometric noise.** 
 
     
-    ## For quick start
-    1. get the baby video and split into multi frames
+    ## For the inference without a temporal filter
+    1. get the baby video and split into multi frames. When using a custom video, also split it into multiple frames.
     
             wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
             ffmpeg -i <path_to_input>/baby.mp4 -f image2 <path_to_output>/baby/%06d.png
     
-    2. And then run the "Inference with temporal filter
-    
-    The default mode is "DifferenceOfIIR".
+    2. And then run the static mode. Add "--velocity_mag" for dynamic mode.
+
+            python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="Path of the video frames" --is_single_gpu_trained
+
+    **The amplification level can be adjusted by changing the <amplification factor>.** 
+
+    ## For the inference with a temporal filter
+
+    2. And then run the temporal filter mode with differenceOfIIR. This code supports three types of <filter_type>, {"differenceOfIIR", "butter", and "fir"}.
           
-           python main.py --phase="play_temporal" --checkpoint_path="Path of the model" --vid_dir="Path to the directory where the video frames are located" --out_dir="path to the output" --amplification_factor=20
-         
+           python main_dp.py --checkpoint_path "./model/epoch50.tar" --phase="play_temporal" --vid_dir="Path of the video frames --amplification_factor 20 --fs 30 --freq 0.04 0.4 --filter_type differenceOfIIR --is_single_gpu_trained
 
-## Inference
-This command is executed in dynamic mode. Delete "--velocity_mag" for static mode.
+    **When applying a temporal filter, it is crucial to accurately specify the frame rate <fs> and the frequency band <freq> to ensure optimal performance and effectiveness.** 
 
-    python main.py --phase="play" --checkpoint_path="Path to the model.tar" --vid_dir="Path to the directory where the video frames are located" 
-    --out_dir="path to the output" --velocity_mag
-
-
-**Inference with temporal filtered**
-
-This code supports two types of <filter_type>, {"butter" and "differenceOfIIR"}.
-
-    python main.py --phase="play_temporal" --checkpoint_path="Path to the model.tar" --vid_dir="Path to the directory where the video frames are located" --out_dir="path to the output" --amplification_factor=<amplification_factor> --fl=<low_cutoff> --fh=<high_cutoff> --fs=<sampling_rate> --n_filter_tap=<n_filter_tap> --filter_type=<filter_type>
-    
-## reconstrunct the dataset folder before training
-Download the dataset at https://github.com/12dmodel/deep_motion_mag
-
-Then, organize the folder like below.
-
-    ├── main.py
-    ├── train
-    │   ├── 1
-    │   │   ├── amplified
-    │   │   │   ├── 000000.png
-    │   │   │   ├── 000001.png
-    │   │   │   ├── .
-    │   │   │   └── .
-    │   ├── 2   
-    │   │   ├── frameA
-    │   │   │   ├── 000000.png
-    │   │   │   ├── 000001.png
-    │   │   │   ├── .
-    │   │   │   └── .
-    │   ├── 3   
-    │   │   ├── frameB
-    │   │   │   ├── 000000.png
-    │   │   │   ├── 000001.png
-    │   │   │   ├── .
-    │   │   │   └── .
-    │   ├── 4   
-    │   │   ├── frameC
-    │   │   │   ├── 000000.png
-    │   │   │   ├── 000001.png
-    │   │   │   ├── .
-    │   │   │   └── .
-    ├── README.md
-    ├── requirements.txt
-    ├── .
-    
-**PNG Image Dataset to lmdb file**
-
-create the lmdb file for {train set, validation set} in the train dataset dir
-        
-    python pngtolmdb.py path/to/master/directory
-
-
-## Train
-
-**Train**
-
-    python main.py --phase="train" --checkpoint_path="Path to the model.tar" --data_path="Path to the directory where the lmdb file are located"
-
-    
 ## Citation
     @article{oh2018learning,
       title={Learning-based Video Motion Magnification},
