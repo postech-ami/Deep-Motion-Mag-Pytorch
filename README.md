@@ -2,11 +2,11 @@
 ### [Paper](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf)
 
 ## Acknowledgement
-**Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.** 
+Thank you to Tae-Hyun Oh, a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.
 
-**Most of this PyTorch reimplementation was written by Kim Sung-Bin, a PhD student at the AMI Lab.**
+Most of this PyTorch reimplementation was written by Kim Sung-Bin, a PhD student at the AMI Lab.
 
-Most of the source code was referenced in the orignal tensorflow implementation.
+The source code was referenced in the original tensorflow implementation.
 1. https://github.com/12dmodel/deep_motion_mag
 
 ## Getting started
