@@ -51,26 +51,26 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 **We highly recommend using a temporal filter for real videos, as they are likely to contain the photometric noise.** 
 
     
-    ## For the inference without a temporal filter
+# For the inference without a temporal filter
 
-    1. get the baby video and split into multi frames. When using a custom video, also split it into multiple frames.
-    
-            wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
-            ffmpeg -i <path_to_input>/baby.mp4 -f image2 <path_to_output>/baby/%06d.png
-    
-    2. And then run the static mode. Add "--velocity_mag" for dynamic mode.
+1) get the baby video and split into multi frames. When using a custom video, also split it into multiple frames.
 
-            python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="Path of the video frames" --is_single_gpu_trained
+        wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
+        ffmpeg -i <path_to_input>/baby.mp4 -f image2 <path_to_output>/baby/%06d.png
 
-    **The amplification level can be adjusted by changing the <amplification factor>.** 
+2) And then run the static mode. Add "--velocity_mag" for dynamic mode.
 
-    ## For the inference with a temporal filter
+        python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="Path of the video frames" --is_single_gpu_trained
 
-    2. And then run the temporal filter mode with differenceOfIIR. This code supports three types of <filter_type>, {"differenceOfIIR", "butter", and "fir"}.
-          
-           python main_dp.py --checkpoint_path "./model/epoch50.tar" --phase="play_temporal" --vid_dir="Path of the video frames --amplification_factor 20 --fs 30 --freq 0.04 0.4 --filter_type differenceOfIIR --is_single_gpu_trained
+**The amplification level can be adjusted by changing the <amplification factor>.** 
 
-    **When applying a temporal filter, it is crucial to accurately specify the frame rate <fs> and the frequency band <freq> to ensure optimal performance and effectiveness.** 
+# For the inference with a temporal filter
+
+1) And then run the temporal filter mode with differenceOfIIR. This code supports three types of <filter_type>, {"differenceOfIIR", "butter", and "fir"}.
+      
+       python main_dp.py --checkpoint_path "./model/epoch50.tar" --phase="play_temporal" --vid_dir="Path of the video frames --amplification_factor 20 --fs 30 --freq 0.04 0.4 --filter_type differenceOfIIR --is_single_gpu_trained
+
+**When applying a temporal filter, it is crucial to accurately specify the frame rate <fs> and the frequency band <freq> to ensure optimal performance and effectiveness.** 
 
 ## Citation
     @article{oh2018learning,
