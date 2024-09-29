@@ -1,4 +1,4 @@
-# Author-verified Pytorch Reimplementation of Learning-based Video Motion Magnification (ECCV 2018)
+# [ECCV'18)]Author-verified Pytorch Reimplementation of "Learning-based Video Motion Magnification"
 ### [Paper](https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Tae-Hyun_Oh_Learning-based_Video_Motion_ECCV_2018_paper.pdf)
 
 ## Acknowledgement
