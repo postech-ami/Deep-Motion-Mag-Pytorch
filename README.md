@@ -51,7 +51,7 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 **We highly recommend using a temporal filter for real videos, as they are likely to contain the photometric noise.** 
 
     
-# For the inference without a temporal filter
+### For the inference without a temporal filter
 
 1) get the baby video and split into multi frames. When using a custom video, also split it into multiple frames.
 
@@ -64,7 +64,7 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 
 **The amplification level can be adjusted by changing the <amplification factor>.** 
 
-# For the inference with a temporal filter
+### For the inference with a temporal filter
 
 1) And then run the temporal filter mode with differenceOfIIR. This code supports three types of <filter_type>, {"differenceOfIIR", "butter", and "fir"}.
       
