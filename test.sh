@@ -1,2 +1,0 @@
-CUDA_VISIBLE_DEVICES=0,1 python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="/home/kwon/Conference/ECCV2024_axial/datasets/baby" --is_single_gpu_trained  
-CUDA_VISIBLE_DEVICES=0,1 python main_dp.py  --checkpoint_path "./model/epoch50.tar" --phase="play" --amplification_factor 20 --vid_dir="/home/kwon/Conference/ECCV2024_axial/datasets/baby" --is_single_gpu_trained  --velocity_mag
