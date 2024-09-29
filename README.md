@@ -47,7 +47,7 @@ In "Without a temporal filter", the static mode amplifies small motion based on 
 
 With a temporal filter, amplification is applied by utilizing the temporal filter. This method effectively amplifies small motions of specific frequencies while reducing noise that may arise in the motion magnification results.
 
-**We highly recommend using a temporal filter for real videos, as they are likely to contain photometric noise.** 
+**We highly recommend using a temporal filter for real videos, as they are likely to contain the photometric noise.** 
 
     
     ## For the inference without a temporal filter
