@@ -51,6 +51,7 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 
     
     ## For the inference without a temporal filter
+
     1. get the baby video and split into multi frames. When using a custom video, also split it into multiple frames.
     
             wget -i https://people.csail.mit.edu/mrub/evm/video/baby.mp4
