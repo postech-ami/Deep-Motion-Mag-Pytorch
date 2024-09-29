@@ -73,9 +73,9 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 **When applying a temporal filter, it is crucial to accurately specify the frame rate <fs> and the frequency band <freq> to ensure optimal performance and effectiveness.** 
 
 ## Citation
-    @article{oh2018learning,
+    @inproceedings{oh2018learning,
       title={Learning-based Video Motion Magnification},
       author={Oh, Tae-Hyun and Jaroensri, Ronnachai and Kim, Changil and Elgharib, Mohamed and Durand, Fr{\'e}do and Freeman, William T and Matusik, Wojciech},
-      journal={arXiv preprint arXiv:1804.02684},
+      booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
       year={2018}
     }
