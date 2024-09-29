@@ -4,7 +4,7 @@
 ## Acknowledgement
 Thank you to [Tae-Hyun Oh](https://ami.postech.ac.kr/members/tae-hyun-oh), a professor at the Postech AMI Lab. and the first author of the Learning-based Video Motion Magnification paper, for validating this PyTorch reimplementation.
 
-Most of this PyTorch reimplementation was written by [Kim Sung-Bin](https://sites.google.com/view/kimsungbin/), a PhD student at the AMI Lab.
+Most of this PyTorch reimplementation was written by [Kim Sung-Bin](https://sites.google.com/view/kimsungbin/), a PhD student at the AMI Lab, and [Hwang Seongjin](https://sites.google.com/g.postech.edu/seongjin?usp=sharing), a combined M.S./Ph.D. student in AiSLab at POSTECH.
 
 The source code was referenced in the original tensorflow implementation.
 1. https://github.com/12dmodel/deep_motion_mag
