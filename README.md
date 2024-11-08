@@ -75,7 +75,7 @@ With a temporal filter, amplification is applied by utilizing the temporal filte
 
 ## Quantitative evaluation
 
-Many motion magnification methods train their models using the training data proposed by ["Oh, Tae-Hyun, et al., "Learning-based video motion magnification"](https://arxiv.org/abs/1804.02684), ECCV, 2018", but the evaluation data for quantitative assessment presented in that paper has not been made publicly available.
+Many motion magnification methods train their models using the training data proposed by ["Oh, Tae-Hyun, et al., "Learning-based video motion magnification, ECCV 2018"](https://arxiv.org/abs/1804.02684), but the evaluation data for quantitative assessment presented in that paper has not been made publicly available.
 
 As a workaround, you can use the evaluation dataset provided in ["Learning-based Axial Video Motion Magnification, ECCV 2024"](https://axial-momag.github.io/axial-momag/) which is strictly made by following the evaluation dataset generation method proposed in "Oh, Tae-Hyun, et al., Learning-based video motion magnification." Numerical results for various motion magnification methods are also available, making it easy to compare your model quantitatively.
 
