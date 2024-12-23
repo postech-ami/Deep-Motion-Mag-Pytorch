@@ -33,6 +33,7 @@ pip install pillow tqdm matplotlib scipy tensorboard opencv-python==4.6.0.66
     ```
 
 ## Inference
+To use the pretrained pytorch model, download the checkpoint from [here](https://drive.google.com/drive/folders/17b4aanuXwtdlIFMdfY1xynd4h47HDVS7?usp=sharing).
 There are various modes for inference in the motion magnification method. Each mode can branch as follows:
 
     ├── Inference
